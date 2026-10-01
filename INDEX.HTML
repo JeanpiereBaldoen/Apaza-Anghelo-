@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroPerú - Vuela a tu destino ideal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes de Google para un aspecto más profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <span>✈️ AeroPerú</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Mis Viajes</a></li>
+                <li><a href="#">Check-in</a></li>
+                <li><a href="#" class="btn-login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Hero con buscador integrado -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Descubre tu próximo destino en el Perú y el mundo</h1>
+                <p>Encuentra los mejores vuelos al mejor precio y vive experiencias inolvidables.</p>
+                
+                <form id="form-vuelos" class="search-form">
+                    <div class="form-group">
+                        <label for="origen">Origen</label>
+                        <input type="text" id="origen" placeholder="Ej. Lima (LIM)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destino">Destino</label>
+                        <input type="text" id="destino" placeholder="Ej. Cusco (CUZ)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de salida</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pasajeros">Pasajeros</label>
+                        <input type="number" id="pasajeros" min="1" max="10" value="1" required>
+                    </div>
+                    <button type="submit" class="btn-buscar">Buscar Vuelos</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de Destinos Populares con Imágenes -->
+        <section class="destinos-section">
+            <h2>Destinos más populares</h2>
+            <p class="section-subtitle">Explora los lugares favoritos de nuestros pasajeros</p>
+            
+            <div class="destinos-grid">
+                <!-- Tarjeta 1: Cusco -->
+                <div class="destino-card">
+                    <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=600&q=80" alt="Cusco, Perú">
+                    <div class="destino-info">
+                        <h3>Cusco</h3>
+                        <p>Desde $59 USD</p>
+                        <button class="btn-card">Ver vuelos</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Arequipa -->
+                <div class="destino-card">
+                    <img src="https://images.unsplash.com/photo-1609137144813-7e949d47edf4?auto=format&fit=crop&w=600&q=80" alt="Arequipa, Perú">
+                    <div class="destino-info">
+                        <h3>Arequipa</h3>
+                        <p>Desde $45 USD</p>
+                        <button class="btn-card">Ver vuelos</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Máncora -->
+                <div class="destino-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Playas del Norte">
+                    <div class="destino-info">
+                        <h3>Piura / Máncora</h3>
+                        <p>Desde $50 USD</p>
+                        <button class="btn-card">Ver vuelos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenedor dinámico de resultados (Oculto inicialmente) -->
+        <section id="resultados" class="results-section" style="display: none;">
+            <h2>Vuelos Disponibles</h2>
+            <div id="lista-vuelos" class="flights-container">
+                <!-- Los resultados se inyectarán aquí mediante JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <p>&copy; 2026 AeroPerú - Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
